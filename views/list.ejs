@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%=title %></title>
+  </head>
+  <body>
+     <% users.forEach((users)=>{%>
+      <li><%=users.mb_id%></li>
+      <li><%=users.mb_password%></li>
+      <li><%=users.mb_name%></li>
+      <li><%=users.mb_email%></li>
+      <li><%=users.mb_level%></li>
+      <li><%=users.mb_datetime%></li>
+      <%}); %>
+  </body>
+</html>
