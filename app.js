@@ -9,15 +9,7 @@ const passport=require('passport');
 
 const routes=require('./routes');
 
-// const sessionMiddleware = session({
-//     resave: false,
-//     saveUninitialized: false,
-//     secret: process.env.COOKIE_SECRET,
-//     cookie: {
-//       httpOnly: true,
-//       secure: false,
-//     },
-//   });
+
 
 app.set('port',port);
 app.set('views','./views');
@@ -26,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(morgan('dev'));
 app.use('/',routes);
-//app.use(sessionMiddleware);
+
 
 sequelize.sync();
 app.listen(app.get('port'),()=>{
